@@ -3,7 +3,31 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
              version="3.0">
-    <persistence-unit name="default">
+    <persistence-unit name="ValidadorDeCorrelativas">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.joelfiare.model.Alumno</class>
+        <class>com.joelfiare.model.Correlatividad</class>
+        <class>com.joelfiare.model.Inscripcion</class>
+        <class>com.joelfiare.model.Materia</class>
 
+        <!-- Configuración de la base de datos -->
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/inscripcion_materia"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="1234"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+
+            <!-- Configuración de Hibernate -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/> <!-- Opciones: create / update / validate -->
+
+            <!-- Opcional: Mostrar las sentencias SQL generadas -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/inscripcion_materia"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="1234"/>
+        </properties>
     </persistence-unit>
 </persistence>

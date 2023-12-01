@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="validador_inscripciones_correlativas@localhost" uuid="93706f4b-8a54-4402-968a-20eefea1769c">
+    <data-source source="LOCAL" name="inscripcion_materia@localhost" uuid="93706f4b-8a54-4402-968a-20eefea1769c">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/validador_inscripciones_correlativas</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/inscripcion_materia</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="ValidadorDeCorrelativas/Hibernate" uuid="67e0dfa0-2947-4694-93ee-e2f0746a3c6a">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+J:/Mi unidad/Repositorios GitHub/demo/src/main/resources/META-INF/persistence.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/inscripcion_materia</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

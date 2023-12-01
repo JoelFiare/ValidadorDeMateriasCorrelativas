@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>J:/Mi unidad/Repositorios GitHub/demo/src</OriginalElement>
+  <nodes>
+    <node x="9.75" y="394.0">com.joelfiare.test.InscripcionTest</node>
+    <node x="-180.0" y="172.0">com.joelfiare.dao.InscripcionDAO</node>
+    <node x="346.91666666666663" y="-121.0">com.joelfiare.model.Alumno</node>
+    <node x="235.49999999999994" y="172.0">com.joelfiare.dao.AlumnoDAO</node>
+    <node x="615.8180291153417" y="431.70380739081753">com.joelfiare.model.Correlatividad</node>
+    <node x="762.25" y="325.0">com.joelfiare.test.MateriaTest</node>
+    <node x="714.9166666666666" y="-121.0">com.joelfiare.model.Materia</node>
+    <node x="605.0" y="126.0">com.joelfiare.dao.MateriaDAO</node>
+    <node x="394.25" y="371.0">com.joelfiare.test.AlumnoTest</node>
+    <node x="-34.08333333333334" y="-121.0">com.joelfiare.model.Inscripcion</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.joelfiare.test.AlumnoTest" target="com.joelfiare.dao.AlumnoDAO" relationship="CREATE">
+      <point x="0.0" y="-39.0" />
+      <point x="83.75000000000006" y="73.5" />
+    </edge>
+    <edge source="com.joelfiare.model.Inscripcion" target="com.joelfiare.model.Inscripcion" relationship="DEPENDENCY">
+      <point x="3.3333333334439885E-4" y="120.5" />
+      <point x="62.917" y="146.0" />
+      <point x="62.917" y="146.0" />
+      <point x="3.3333333334439885E-4" y="120.5" />
+    </edge>
+    <edge source="com.joelfiare.test.InscripcionTest" target="com.joelfiare.dao.InscripcionDAO" relationship="CREATE">
+      <point x="0.0" y="-39.0" />
+      <point x="95.25" y="85.0" />
+    </edge>
+    <edge source="com.joelfiare.test.InscripcionTest" target="com.joelfiare.model.Inscripcion" relationship="CREATE">
+      <point x="-85.5" y="0.0" />
+      <point x="-197.5" y="433.0" />
+      <point x="-197.5" y="-0.5" />
+      <point x="-97.0" y="0.0" />
+    </edge>
+    <edge source="com.joelfiare.test.MateriaTest" target="com.joelfiare.dao.MateriaDAO" relationship="CREATE">
+      <point x="0.0" y="-39.0" />
+      <point x="83.25" y="73.5" />
+    </edge>
+    <edge source="com.joelfiare.dao.MateriaDAO" target="com.joelfiare.model.Materia" relationship="DEPENDENCY">
+      <point x="0.0" y="-73.5" />
+      <point x="761.0" y="100.0" />
+      <point x="811.917" y="100.0" />
+      <point x="3.3333333337282056E-4" y="97.5" />
+    </edge>
+    <edge source="com.joelfiare.test.AlumnoTest" target="com.joelfiare.model.Alumno" relationship="CREATE">
+      <point x="82.0" y="0.0" />
+      <point x="575.75" y="410.0" />
+      <point x="575.75" y="-0.5" />
+      <point x="97.0" y="0.0" />
+    </edge>
+    <edge source="com.joelfiare.model.Correlatividad" target="com.joelfiare.model.Correlatividad" relationship="DEPENDENCY">
+      <point x="0.0" y="120.5" />
+      <point x="712.8180291153417" y="690.2038073908175" />
+      <point x="827.3180291153417" y="690.2038073908175" />
+      <point x="827.3180291153417" y="550.2038073908175" />
+      <point x="97.0" y="-2.0" />
+    </edge>
+    <edge source="com.joelfiare.dao.InscripcionDAO" target="com.joelfiare.model.Inscripcion" relationship="DEPENDENCY">
+      <point x="0.0" y="-85.0" />
+      <point x="0.0" y="146.0" />
+      <point x="62.917" y="146.0" />
+      <point x="3.3333333334439885E-4" y="120.5" />
+    </edge>
+    <edge source="com.joelfiare.dao.AlumnoDAO" target="com.joelfiare.model.Alumno" relationship="DEPENDENCY">
+      <point x="5.6843418860808015E-14" y="-73.5" />
+      <point x="392.5" y="146.0" />
+      <point x="443.917" y="146.0" />
+      <point x="3.3333333334439885E-4" y="120.5" />
+    </edge>
+    <edge source="com.joelfiare.model.Alumno" target="com.joelfiare.model.Alumno" relationship="DEPENDENCY">
+      <point x="3.3333333334439885E-4" y="120.5" />
+      <point x="443.917" y="146.0" />
+      <point x="443.917" y="146.0" />
+      <point x="3.3333333334439885E-4" y="120.5" />
+    </edge>
+    <edge source="com.joelfiare.test.MateriaTest" target="com.joelfiare.model.Materia" relationship="CREATE">
+      <point x="82.0" y="0.0" />
+      <point x="943.75" y="364.0" />
+      <point x="943.75" y="-23.5" />
+      <point x="97.0" y="0.0" />
+    </edge>
+    <edge source="com.joelfiare.model.Materia" target="com.joelfiare.model.Materia" relationship="DEPENDENCY">
+      <point x="3.3333333337282056E-4" y="97.5" />
+      <point x="811.917" y="100.0" />
+      <point x="811.917" y="100.0" />
+      <point x="3.3333333337282056E-4" y="97.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.9211195928753181" showDependencies="true" x="381.5" y="284.99999999999994" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

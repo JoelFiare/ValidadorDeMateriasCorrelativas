@@ -13,9 +13,6 @@ public class InscripcionTest {
         // Crear un InscripcionDAO para interactuar con la base de datos
         InscripcionDAO inscripcionDAO = new InscripcionDAO();
 
-        // Agregar una inscripción de prueba
-
-
         // Suponiendo que aquí obtienes las correlatividades cursadas por el alumno
         List<Correlatividad> correlatividadesCursadas = obtenerCorrelatividadesCursadas();
 
@@ -27,8 +24,7 @@ public class InscripcionTest {
         // Utilizando el servicio para verificar si la inscripción está aprobada
         InscripcionService inscripcionService = new InscripcionService();
         boolean aprobada = inscripcionService.estaAprobada(inscripcion, correlatividadesCursadas);
-
-
+        System.out.println("La inscripción está aprobada? " + aprobada);
         // Agregar la inscripción a la base de datos
         inscripcionDAO.agregarInscripcion(inscripcion);
 

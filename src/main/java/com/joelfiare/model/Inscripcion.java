@@ -62,6 +62,7 @@ public class Inscripcion {
         result = 31 * result + (materiaId != null ? materiaId.hashCode() : 0);
         return result;
     }
+
     public boolean aprobada(List<Correlatividad> correlatividadesCursadas) {
         for (Correlatividad correlatividad : correlatividadesCursadas) {
             if (correlatividad.getMateriaId() == this.getMateriaId()) {

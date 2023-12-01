@@ -37,6 +37,8 @@ public class InscripcionDAO {
         }
     }
 
+
+
     public List<Inscripcion> obtenerTodasLasInscripciones() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         return entityManager.createQuery("SELECT i FROM Inscripcion i", Inscripcion.class).getResultList();

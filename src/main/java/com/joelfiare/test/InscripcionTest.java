@@ -1,7 +1,9 @@
 package com.joelfiare.test;
 
 import com.joelfiare.dao.InscripcionDAO;
+import com.joelfiare.model.Correlatividad;
 import com.joelfiare.model.Inscripcion;
+import com.joelfiare.service.InscripcionService;
 
 import java.util.List;
 
@@ -12,9 +14,20 @@ public class InscripcionTest {
         InscripcionDAO inscripcionDAO = new InscripcionDAO();
 
         // Agregar una inscripción de prueba
-        Inscripcion inscripcion = new Inscripcion();
+
+
+        // Suponiendo que aquí obtienes las correlatividades cursadas por el alumno
+        List<Correlatividad> correlatividadesCursadas = obtenerCorrelatividadesCursadas();
+
+        // Suponiendo que aquí obtienes la inscripción
+        Inscripcion inscripcion = obtenerInscripcion();
         inscripcion.setAlumnoId(1); // ID de alumno existente en la base de datos
         inscripcion.setMateriaId(1); // ID de materia existente en la base de datos
+
+        // Utilizando el servicio para verificar si la inscripción está aprobada
+        InscripcionService inscripcionService = new InscripcionService();
+        boolean aprobada = inscripcionService.estaAprobada(inscripcion, correlatividadesCursadas);
+
 
         // Agregar la inscripción a la base de datos
         inscripcionDAO.agregarInscripcion(inscripcion);
@@ -38,5 +51,12 @@ public class InscripcionTest {
 
         // Cerrar el EntityManagerFactory al finalizar
         inscripcionDAO.cerrarEntityManagerFactory();
+    }
+    private static List<Correlatividad> obtenerCorrelatividadesCursadas() {
+        return List.of();
+    }
+
+    private static Inscripcion obtenerInscripcion() {
+        return new Inscripcion();
     }
 }

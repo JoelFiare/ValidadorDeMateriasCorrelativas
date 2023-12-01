@@ -2,6 +2,8 @@ package com.joelfiare.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Inscripcion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -59,5 +61,13 @@ public class Inscripcion {
         result = 31 * result + (alumnoId != null ? alumnoId.hashCode() : 0);
         result = 31 * result + (materiaId != null ? materiaId.hashCode() : 0);
         return result;
+    }
+    public boolean aprobada(List<Correlatividad> correlatividadesCursadas) {
+        for (Correlatividad correlatividad : correlatividadesCursadas) {
+            if (correlatividad.getMateriaId() == this.getMateriaId()) {
+                return true;
+            }
+        }
+        return false;
     }
 }
